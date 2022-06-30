@@ -26,7 +26,7 @@ pip3 install -r requirements.txt
 ```
 
 
-## configuration
+## Configuration
 
 **You need to get discord bot token**
 
