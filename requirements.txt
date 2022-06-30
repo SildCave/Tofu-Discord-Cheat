@@ -1,0 +1,4 @@
+discum==1.4.0
+tinydb==4.7.0
+humanfriendly==10.0
+git+https://github.com/Rapptz/discord.py
