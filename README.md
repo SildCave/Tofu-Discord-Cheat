@@ -9,7 +9,7 @@
 - Mini game
 - Grabbing
 - Fusion tokens
-- logging
+- Logging
 
 
 
