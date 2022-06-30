@@ -26,7 +26,7 @@ pip3 install -r requirements.txt
 ```
 
 
-## Configuration
+## configuration
 
 **You need to get discord bot token**
 
@@ -63,6 +63,11 @@ pip3 install -r requirements.txt
 **You need to set your tofu prefix and tofu_channel_id**'
 1. If your tofu prefix is "t" just write it after the "=" sign | example: prefix = 't'
 2. "tofu_channel_id" is id of the channel where all "workers" will be "working", all workers must have acces to this cahnnel | example:  tofu_channel_id = 595727408058073090
+
+## Helper bot guide
+
+```!cd - shows info about "worker" cooldowns```
+```!stats - shows info about "worker" stats, such as the number of summons, minigames or redeemed dailys```
 
 ## License
 
