@@ -19,9 +19,9 @@ if __name__ == '__main__':
         def __init__(self, bot, name, id):
             self.name = name
             self.bot = bot
-            self.drop_cooldown = time.time() - drop_cd + random.randint(1, 50)
-            self.tmg_cooldown = time.time() - tmg_cd + random.randint(1, 50)
-            self.daily_cooldown = time.time() - daily_cd + random.randint(1, 50)
+            self.drop_cooldown = time.time() - drop_cd + random.randint(10, 150)
+            self.tmg_cooldown = time.time() - tmg_cd + random.randint(10, 150)
+            self.daily_cooldown = time.time() - daily_cd + random.randint(10, 150)
             self.id = id
 
     drop_cd = (20 * 60) + 2
@@ -78,7 +78,7 @@ if __name__ == '__main__':
             
         db_workers.update({'worker_stats': stats_template})
 
-    reset_stats()
+    
 
     def working_cycle(worker, cooldowns_shared_list):
 
@@ -231,7 +231,7 @@ if __name__ == '__main__':
                 
             embed = discord.Embed(title = "Cooldowns", colour = discord.Colour(0x1493ef), description = f"Cooldowns for {worker.name}")
             embed.set_footer(text="https://github.com/SildCave/Tofu-Discord-Cheat", icon_url="https://findicons.com/files/icons/2808/jolly_icons_free/128/github.png")
-            embed.set_thumbnail(url = ctx.guild.get_member(worker_id).avatar.url)
+            embed.set_thumbnail(url = ctx.guild.get_member(int(worker_id)).avatar.url)
 
 
             summon_temp_cd = format_timespan(cooldowns_shared_list[shared_worker_info_index]['drop_cooldown'])
@@ -286,7 +286,7 @@ if __name__ == '__main__':
 
     @bot.listen('on_message')
     async def handle_drop(message):
-        if ' is summoning 2 cards!' in message.content:
+        if (message.author.id == tofu_channel_id) and ' is summoning 2 cards!' in message.content:
 
             for worker_index, worker in enumerate(workers):
                 if int(worker.id) == int(message.content.replace(' is summoning 2 cards!', '').replace('>', '').replace('<@', '')):
@@ -296,7 +296,7 @@ if __name__ == '__main__':
             worker.bot.addReaction(str(message.channel.id), str(message.id), '❓')
             update_stats(worker, 'grab')
 
-        if ' grabbed a **Fusion Token**!<a:token:973893149770522674>' in message.content:
+        if (message.author.id == tofu_channel_id) and ' grabbed a **Fusion Token**!<a:token:973893149770522674>' in message.content:
             for worker in workers:
                 if int(worker.id) == int(message.content.replace(' grabbed a **Fusion Token**!<a:token:973893149770522674>', '').replace('>', '').replace('<@', '')):
                     worker = worker
@@ -305,10 +305,10 @@ if __name__ == '__main__':
             worker.bot.sendMessage(str(message.channel.id), f'{prefix}open fusion token')
 
         try:
-            if (message.author.id == 792827809797898240) and ('receive a random card from' in message.embeds[0].description):
+            if (message.author.id == tofu_channel_id) and ('receive a random card from' in message.embeds[0].description):
                 fusion_worker_id = int(message.embeds[0].author.icon_url.split('/')[4])
 
-                for worker_index, worker in enumerate(workers):
+                for worker in enumerate(workers):
                     if int(worker.id) == fusion_worker_id:
                         worker = worker
                         time.sleep(1)
