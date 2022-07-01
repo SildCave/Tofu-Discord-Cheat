@@ -38,7 +38,7 @@ pip3 install -r requirements.txt
 5. Click “Add Bot” button on the right side
 6. Click the “Yes, do it!" button
 7. Click the “Reset Token" button
-8. Copy the token and paste it to config.cfg file | example: bot_token = 'paste your token here'
+8. Copy the token and paste it to config.py file | example: bot_token = 'paste your token here'
 9. Turn **Presence Intent**, **Server Members Intent** and **Message Content Intent** on
 10. Click “OAuth2” button on the left side
 11. Click “URL GENERATOR” button on under the “OAuth2” button
