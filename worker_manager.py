@@ -12,7 +12,16 @@ def option_1():
     worker_personal_token = input('dc_personal_token: ')
     worker_friendly_name = input('worker_friendly_name: ')
     worker_id = input('worker_id: ')
-    db.insert({'worker_friendly_name': worker_friendly_name, 'worker_personal_token': worker_personal_token, 'worker_id': worker_id})
+    
+    stats = {
+        'summon': 0,
+        'minigame': 0,
+        'daily': 0,
+        'grab': 0,
+        'fusion_tokens_used': 0
+    }
+
+    db.insert({'worker_friendly_name': worker_friendly_name, 'worker_personal_token': worker_personal_token, 'worker_id': worker_id, 'worker_stats': stats})
 
     print('\n')
 
