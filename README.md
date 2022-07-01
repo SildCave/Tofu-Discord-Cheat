@@ -70,6 +70,12 @@ pip3 install -r requirements.txt
 
 ```!stats - shows info about "worker" stats, such as the number of summons, minigames or redeemed dailys```
 
+```!all_stats - shows info about "workers" stats, such as the number of summons, minigames or redeemed dailys```
+
+```!reset_all_stats - restets every worker stats```
+
+
+
 ## License
 
 MIT
