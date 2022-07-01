@@ -51,14 +51,15 @@ pip3 install -r requirements.txt
 
 **GUIDE**
 1. Login to your "worker" account on Discord's website
-2. Press Ctrl + Shift + I 
-3. Click Network from the toolbar at the top
-4. Go to random dm
-5. Wait for network tab to chill
-6. Send message, content doesn't matter
-7. Click the Headers tab, scroll down until you see authorization
-8. Store token, username and id somewhere
-9. Launch "worker_manager.py" and select 1st option
+2. Your worker needs to have avatar for cheat to work
+3. Press Ctrl + Shift + I 
+4. Click Network from the toolbar at the top
+5. Go to random dm
+6. Wait for network tab to chill
+7. Send message, content doesn't matter
+8. Click the Headers tab, scroll down until you see authorization
+9. Store token, username and id somewhere
+10. Launch "worker_manager.py" and select 1st option
 
 **You need to set your tofu prefix and tofu_channel_id**'
 1. If your tofu prefix is "t" just write it after the "=" sign | example: prefix = 't'
