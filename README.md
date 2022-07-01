@@ -61,9 +61,11 @@ pip3 install -r requirements.txt
 9. Store token, username and id somewhere
 10. Launch "worker_manager.py" and select 1st option
 
-**You need to set your tofu prefix and tofu_channel_id**'
+**You need to set your tofu prefix, tofu_channel_id, tofu_user_id and admin_id**'
 1. If your tofu prefix is "t" just write it after the "=" sign | example: prefix = 't'
 2. "tofu_channel_id" is id of the channel where all "workers" will be "working", all workers must have acces to this cahnnel | example:  tofu_channel_id = 595727408058073090
+3. "tofu_user_id" is tofu id, just right click on tofu and copy id
+4. "admin_id" is your id, it allows you to controll bot
 
 ## Helper bot guide
 
